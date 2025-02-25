@@ -1,4 +1,4 @@
-name: 📦 Publish nuget library
+name: publish
 
 on:
   release:
