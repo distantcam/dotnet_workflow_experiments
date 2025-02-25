@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: 📦 Download Artifact
         run: gh release download --pattern '*.nupkg'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Display structure of downloaded files
         run: ls -R
