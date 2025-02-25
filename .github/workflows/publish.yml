@@ -1,0 +1,17 @@
+name: 📦 Publish nuget library
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  publish:
+    name: 📦 Publish nuget library
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📦 Download Artifact
+        run: gh release download --pattern '*.nupkg'
+
+      - name: Display structure of downloaded files
+        run: ls -R
